@@ -62,7 +62,7 @@ class Main extends Component {
 
         const com = this.state.tasks.filter((todo) => 
         {if(todo.id === id) return todo;});
-        const completed = [...this.state.comp, ...com];
+        const completed = [...com, ...this.state.comp];
 
         this.setState({
             tasks: rem,

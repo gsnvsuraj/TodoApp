@@ -24,8 +24,15 @@ class Task extends Component {
             <div>
                 <div className="p-2">
                     <div>
-                        <input type="checkbox" id={this.state.id} onClick={() => {this.changeToComp(this.state.id)}} />
-                        <span className="col-sm-8"> {this.state.title}</span>
+                        <input className="inp-cbx" id={this.state.id} type="checkbox" style={{display: "none"}} onClick={() => {this.changeToComp(this.state.id)}} />
+                        <label className="cbx" htmlFor={this.state.id}>
+                            <span>
+                                <svg width="12px" height="9px" viewBox="0 0 12 9">
+                                    <polyline points="1 5 4 8 11 1"></polyline>
+                                </svg>
+                            </span>
+                            <span> {this.state.title}</span>
+                        </label>
                         <button className="btn btn-danger btn-sm m-2 p-1" onClick={() => {this.remove(this.state.id)}}>Remove</button>
                     </div>
                 </div>
