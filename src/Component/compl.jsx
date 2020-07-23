@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Task extends Component {
+class Compl extends Component {
     constructor(props) {
         super(props);
 
@@ -15,8 +15,8 @@ class Task extends Component {
         this.props.handleRemove(id);
     }
 
-    changeToComp(id) {
-        this.props.changeComp(id);
+    changeToTask(id) {
+        this.props.changeTask(id);
     }
     
     render() { 
@@ -24,7 +24,7 @@ class Task extends Component {
             <div>
                 <div className="p-2">
                     <div>
-                        <input type="checkbox" id={this.state.id} onClick={() => {this.changeToComp(this.state.id)}} />
+                        <input type="checkbox" id={this.state.id} onClick={() => {this.changeToTask(this.state.id)}} checked="true" />
                         <span className="col-sm-8"> {this.state.title}</span>
                         <button className="btn btn-danger btn-sm m-2 p-1" onClick={() => {this.remove(this.state.id)}}>Remove</button>
                     </div>
@@ -34,4 +34,4 @@ class Task extends Component {
     }
 }
  
-export default Task;
+export default Compl;
