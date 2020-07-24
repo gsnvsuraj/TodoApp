@@ -31,7 +31,7 @@ class Task extends Component {
                                     <polyline points="1 5 4 8 11 1"></polyline>
                                 </svg>
                             </span>
-                            <span> {this.state.title}</span>
+                            <span> {this.state.title} </span>
                         </label>
                         <button className="btn btn-danger btn-sm m-2 p-1" onClick={() => {this.remove(this.state.id)}}>Remove</button>
                     </div>
