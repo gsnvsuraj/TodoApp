@@ -18,6 +18,8 @@ class Main extends Component {
     }
 
     refresh = () => {
+        document.getElementById("todoIn").focus();
+
         this.setState({
             tasks: [],
             comp: []
@@ -25,9 +27,7 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            tasks: myData.tasks
-        });
+        this.refresh();
     }
 
     handleSub(event) {
@@ -40,6 +40,7 @@ class Main extends Component {
 
         this.setState({tasks:varTasks});
         document.getElementById("todoIn").value = "";
+        document.getElementById("todoAdd").disabled = true;
         event.preventDefault();
     }
 
@@ -82,6 +83,15 @@ class Main extends Component {
             tasks: remTask,
             comp: com
         });
+    }
+
+    validateInp() {
+        const value = document.getElementById("todoIn").value.trim();
+
+        if (value)
+            document.getElementById("todoAdd").disabled = false;
+        else
+            document.getElementById("todoAdd").disabled = true;
     }
 
     downloadTxtFile = () => {
@@ -142,8 +152,8 @@ class Main extends Component {
                     <div>
                         <form onSubmit={this.handleSub}>
                             <div className="">
-                                <input type="text" id="todoIn" name="todo" className="" />
-                                <input type="submit" value="Add" className="btn btn-primary btn-sm m-2 font-weight-bold" />
+                                <input type="text" id="todoIn" name="todo" className="" onInput={this.validateInp} />
+                                <input type="submit" id="todoAdd" value="Add" className="btn btn-primary btn-sm m-2 font-weight-bold" disabled={true} />
                             </div>
                         </form>
                     </div><br /><br />

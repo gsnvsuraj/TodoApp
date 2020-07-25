@@ -33,7 +33,7 @@ class Compl extends Component {
                             </span>
                             <span> {this.state.title} </span>
                         </label>
-                        <button className="btn btn-danger btn-sm m-2 p-1" onClick={() => {this.remove(this.state.id)}}>Remove</button>
+                        <button className="btn btn-danger btn-sm m-2 p-1 rm-btn" onClick={() => {this.remove(this.state.id)}}>X</button>
                     </div>
                 </div>
             </div>

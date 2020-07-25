@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.css';
 import './bootstrap.min.css';
+import './App.css';
 import Main from './Component/main';
+import DarkMode from './Component/darkmode';
 
 function App() {
   return (
@@ -10,7 +11,11 @@ function App() {
         <h1>ToDo App</h1>
       </header>
 
-      <Main />
+      <DarkMode />
+
+      <div className="App-body">
+        <Main />
+      </div>
 
     </div>
   );

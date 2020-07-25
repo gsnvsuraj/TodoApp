@@ -132,3 +132,21 @@
 		transform: scale(1.2);
 	}
 }
+
+.rm-btn {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.darkMode {
+  background-color: #2d2d2d;
+  color: #eee;
+  opacity: 0.87;
+}
+
+.darkImg {
+  float: right;
+  margin: 10px 20px 5px 0px;
+  cursor: pointer;
+}
