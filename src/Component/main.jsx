@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import myData from './data.json';
 import Task from './task';
 import Compl from './compl';
 
